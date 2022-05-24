@@ -1,0 +1,40 @@
+{
+  "name": "html-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "run-s clean build:all",
+    "build:all": "run-p build:img build:html build:js build:css",
+    "build:img": "cpx \"./src/img/**/*\" ./dist/img",
+    "build:html": "cpx \"./src/**/*.html\" ./dist/",
+    "build:js": "run-s tsc minify",
+    "build:css": "run-s scss postcss",
+    "clean": "rm -rf dist",
+    "tsc": "tsc -outDir ./dist/js",
+    "minify": "uglifyjs --compress --mangle --source-map \"content=dist/js/index.js.map\" -o dist/js/index.js dist/js/index.js",
+    "scss": "sass --style compressed ./src/scss:./src/css",
+    "postcss": "postcss ./src/css/*.css --use autoprefixer --no-map --dir ./dist/css",
+    "watch:css": "sass --style compressed ./src/scss:./src/css -w",
+    "watch:js": "tsc -w",
+    "serve": "node .",
+    "sync": "browser-sync start -s './src' -w 'src/*.html' 'src/css/*.css' 'img/**/*' 'src/js/*.js'",
+    "dev": "run-p sync watch:*"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "browser-sync": "^2.27.5",
+    "cpx": "^1.5.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.1",
+    "sass": "^1.43.3",
+    "typescript": "^4.4.4",
+    "uglify-js": "^3.14.2"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

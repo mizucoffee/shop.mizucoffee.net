@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es3",
+    "module": "commonjs",
+    "sourceMap": true,
+    "outDir": "./src/js",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "pretty": false,
+    "lib": ["esnext", "dom"],
+    "skipLibCheck": true,
+    "typeRoots": ["src/types", "node_modules/@types"],
+    "noEmitOnError": true,
+  },
+  "include": [
+    "src/ts/**/*.ts"
+  ],
+}
