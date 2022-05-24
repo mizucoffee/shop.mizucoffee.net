@@ -1,3 +1,81 @@
+* {
+  box-sizing: border-box;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
 body {
-  background: #fafafa;
+  background-image: url("/img/stripe.png");
+  padding: 0px 32px;
+}
+
+h1 {
+  width: fit-content;
+  text-align: center;
+  margin: 48px auto 0px;
+  font-size: 48pt;
+  font-family: 'Yusei Magic', sans-serif;
+  font-weight: normal;
+}
+
+h2 {
+  width: fit-content;
+  text-align: center;
+  margin: 16px auto;
+  font-size: 24pt;
+  font-family: 'Yusei Magic', sans-serif;
+  font-weight: normal;
+}
+
+h3 {
+  width: fit-content;
+  text-align: center;
+  margin: 0px auto 16px;
+  font-size: 20pt;
+  font-family: 'Yusei Magic', sans-serif;
+  font-weight: normal;
+}
+
+h4 {
+  width: fit-content;
+  text-align: center;
+  margin: 0px auto 16px;
+  font-size: 16pt;
+  font-family: 'Yusei Magic', sans-serif;
+  font-weight: normal;
+}
+
+.container {
+  max-width: 800px;
+  margin: 32px auto;
+  background: white;
+  border: 6px solid #222;
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.marker {
+  background:linear-gradient(transparent 60%, #ff6 60%);
+}
+
+p {
+  margin: 0px;
+  font-size: 14pt;
+  text-align: center;
+}
+
+.item {
+  text-align: center;
+  margin: 32px auto;
+  img {
+    width: 100%;
+    max-width: 320px;
+  }
+  .item-name {
+    font-weight: 700;
+  }
+}
+
+.mail {
+  margin: 10px auto;
+  display: inline-block;
 }
